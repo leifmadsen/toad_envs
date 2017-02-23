@@ -12,11 +12,11 @@ undercloud_dhcp_start: 172.31.255.105
 undercloud_dhcp_end: 172.31.255.124
 undercloud_inspection_iprange: 172.31.255.200,172.31.255.220
 
-virthost_provisioning_interface: <<nic_for_provision_on_the_virthost>>
-virthost_provisioning_ip: 172.31.255.125
+virthost_provisioning_interface: enp2s0
+virthost_provisioning_ip: 192.168.6.1
 virthost_provisioning_netmask: 255.255.255.0
-virthost_provisioning_hwaddr: <<mac_address_for_provision_on_the_virthost>>
-virthost_ext_provision_interface: <<external_nic_on_the_virthost>>
+virthost_provisioning_hwaddr: 00:1b:21:05:26:36
+virthost_ext_provision_interface: br0.5
 
 undercloud_instackenv_template: "{{ jenkins_workspace }}/toad_envs/{{ hw_env }}/instackenv.json"
 overcloud_nodes:
@@ -45,13 +45,13 @@ networks:
 
   - name: overcloud
     bridge:  brovc
-    phys_int: <<nic_for_provision_on_the_virthost>>
+    phys_int: enp2s0
 
 undercloud_networks: {}
-network_isolation_ipv4_cidr: <<external_ip_cidr>>
-undercloud_external_network_cidr: <<external_ip_cidr>>
+network_isolation_ipv4_cidr: 192.168.10.0/24
+undercloud_external_network_cidr: 192.168.10.0/24
 
-floating_ip_cidr: <<floating_ip_cidr>>
-floating_ip_start: <<floating_ip_start>>
-floating_ip_end: <<floating_ip_end>>
-external_network_gateway: <<external_network_gateway>>
+floating_ip_cidr: 192.168.10.0/24
+floating_ip_start: 192.168.10.128
+floating_ip_end: 192.168.10.191
+external_network_gateway: 192.168.10.1

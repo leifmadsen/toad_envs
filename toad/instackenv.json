@@ -2,16 +2,42 @@
   "nodes": [
     {
       "mac": [
-        "<<provisioning_mac_address_here>>"
+        "bc:5f:f4:ff:26:e4"
       ],
-      "cpu": "<<number_of_cores>>",
-      "memory": "<<memory_in_mb>>",
-      "disk": "<<disk_in_gb>>",
+      "cpu": "2",
+      "memory": "16",
+      "disk": "20",
       "arch": "x86_64",
       "pm_type": "pxe_ipmitool",
-      "pm_user": "<<ipmi_user>>",
-      "pm_password": "<<ipmi_password>>",
-      "pm_addr": "<<ipmi_address>>"
+      "pm_user": "admin",
+      "pm_password": "admin",
+      "pm_addr": "172.16.200.21"
+    },
+    {
+      "mac": [
+        "bc:5f:f4:ff:28:0f"
+      ],
+      "cpu": "2",
+      "memory": "16",
+      "disk": "20",
+      "arch": "x86_64",
+      "pm_type": "pxe_ipmitool",
+      "pm_user": "admin",
+      "pm_password": "admin",
+      "pm_addr": "172.16.200.22"
+    },
+    {
+      "mac": [
+        "bc:5f:f4:ff:28:80"
+      ],
+      "cpu": "2",
+      "memory": "16",
+      "disk": "20",
+      "arch": "x86_64",
+      "pm_type": "pxe_ipmitool",
+      "pm_user": "admin",
+      "pm_password": "admin",
+      "pm_addr": "172.16.200.23"
     }
  ]
 }
