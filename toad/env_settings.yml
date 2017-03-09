@@ -12,11 +12,11 @@ undercloud_dhcp_start: 172.16.200.105
 undercloud_dhcp_end: 172.16.200.124
 undercloud_inspection_iprange: 172.16.200.200,172.16.200.220
 
-virthost_provisioning_interface: enp1s0
+virthost_provisioning_interface: enp3s0
 virthost_provisioning_ip: 172.16.200.125
 virthost_provisioning_netmask: 255.255.255.0
 virthost_provisioning_hwaddr: 00:1b:21:05:26:36
-virthost_ext_provision_interface: br1
+virthost_ext_provision_interface: enp2s0
 
 undercloud_instackenv_template: "{{ jenkins_workspace }}/toad_envs/{{ hw_env }}/instackenv.json"
 overcloud_nodes:
@@ -45,7 +45,7 @@ networks:
 
   - name: overcloud
     bridge:  brovc
-    phys_int: enp1s0
+    phys_int: enp2s0
 
 undercloud_networks: {}
 network_isolation_ipv4_cidr: 192.168.10.0/24
