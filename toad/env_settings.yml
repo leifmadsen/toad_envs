@@ -29,7 +29,7 @@ network_environment_file: "{{ jenkins_workspace }}/toad_envs/{{ hw_env }}/net_en
 network_isolation_type: single_nic_vlans
 network_isolation: true
 enable_vbmc: false
-external_network_cidr: 192.168.10.0/24
+external_network_cidr: 192.168.23.0/24
 
 networks:
   - name: external
