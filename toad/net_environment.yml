@@ -20,5 +20,3 @@ parameter_defaults:
     ControlPlaneDefaultRoute: 172.16.200.1
     EC2MetadataIp: 172.16.200.1
     DnsServers: ["8.8.8.8", "8.8.4.4",]
-    HorizonNetwork: external
-
