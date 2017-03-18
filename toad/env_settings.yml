@@ -21,6 +21,9 @@ virthost_ext_provision_interface: enp2s0
 
 undercloud_instackenv_template: "{{ jenkins_workspace }}/toad_envs/{{ hw_env }}/instackenv.json"
 overcloud_nodes:
+overcloud_templates_repo: https://github.com/leifmadsen/tripleo-heat-templates.git
+overcloud_templates_branch: stable/newton
+overcloud_templates_path: /home/stack/tht
 undercloud_type: virtual
 step_introspect: true
 introspect: true
