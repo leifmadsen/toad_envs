@@ -24,6 +24,7 @@ overcloud_nodes:
 overcloud_templates_repo: https://github.com/leifmadsen/tripleo-heat-templates.git
 overcloud_templates_branch: stable/newton
 overcloud_templates_path: /home/stack/tht
+modify_image_vc_root_password: "welcome"
 undercloud_type: virtual
 step_introspect: true
 introspect: true
