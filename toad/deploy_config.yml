@@ -1,2 +1,2 @@
-extra_args: " --control-flavor baremetal --compute-flavor baremetal -e ~/network-environment.yaml --ntp-server pool.ntp.org"
+extra_args: " --control-flavor baremetal --compute-flavor baremetal -e ~/network-environment.yaml --ntp-server pool.ntp.org --libvirt-type kvm"
 
