@@ -22,7 +22,7 @@ virthost_ext_provision_interface: enp2s0
 undercloud_instackenv_template: "{{ jenkins_workspace }}/toad_envs/{{ hw_env }}/instackenv.json"
 overcloud_nodes:
 overcloud_templates_repo: https://github.com/leifmadsen/tripleo-heat-templates.git
-overcloud_templates_branch: stable/newton
+overcloud_templates_branch: stable/ocata
 overcloud_templates_path: /home/stack/tht
 modify_image_vc_root_password: "welcome"
 undercloud_type: virtual
@@ -56,13 +56,13 @@ repos:
   - type: generic
     reponame: delorean
     filename: delorean.repo
-    baseurl: https://trunk.rdoproject.org/centos7-newton/current-passed-ci/
-    hash_url: https://trunk.rdoproject.org/centos7-newton/current-passed-ci/delorean.repo
+    baseurl: https://trunk.rdoproject.org/centos7-ocata/current-passed-ci/
+    hash_url: https://trunk.rdoproject.org/centos7-ocata/current-passed-ci/delorean.repo
     priority: 20
 
   - type: file
     filename: delorean-deps.repo
-    down_url: https://trunk.rdoproject.org/centos7-newton/delorean-deps.repo
+    down_url: https://trunk.rdoproject.org/centos7-ocata/delorean-deps.repo
 
   - type: package
     pkg_name: centos-release-ceph-jewel
